@@ -1,0 +1,35 @@
+{
+  "name": "desktop-sticky-note",
+  "version": "1.0.0",
+  "description": "桌面便签工具 - 支持置顶显示、悬浮球隐藏、一键恢复",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "pack": "electron-packager . 桌面便签 --platform=win32 --arch=x64 --out=dist --overwrite --ignore=dist"
+  },
+  "keywords": [
+    "sticky-note",
+    "desktop",
+    "electron"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {},
+  "build": {
+    "appId": "com.desktop.stickynote",
+    "productName": "桌面便签",
+    "win": {
+      "target": "portable",
+      "sign": false
+    },
+    "portable": {
+      "artifactName": "桌面便签.exe"
+    }
+  }
+}
